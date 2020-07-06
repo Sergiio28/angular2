@@ -1,0 +1,167 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["formulario-formulario-module"],{
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/formulario/formulario.page.html":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/formulario/formulario.page.html ***!
+  \***************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-navbar color=\"primary\">\n    <ion-title>Formulario</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <form [formGroup]=\"myForm\" (ngSubmit)=\"saveData()\">\n    <ion-list>\n      <ion-item>\n        <ion-icon name=\"person\" item-start></ion-icon>\n        <ion-label stacked>Nombres:</ion-label>\n        <ion-input formControlName=\"name\" type=\"text\" placeholder=\"Nombre\"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-icon name=\"person\" item-start></ion-icon>\n        <ion-label stacked>Apellidos:</ion-label>\n        <ion-input formControlName=\"lastName\" type=\"text\" placeholder=\"Apellidos\"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-icon name=\"mail\" item-start></ion-icon>\n        <ion-label stacked>Correo electronico:</ion-label>\n        <ion-input formControlName=\"email\" type=\"email\" placeholder=\"Email\"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-icon name=\"calendar\" item-start></ion-icon>\n        <ion-label stacked>Fecha de nacimiento:</ion-label>\n        <ion-datetime formControlName=\"dateBirth\" displayFormat=\"MM-DD-YYYY\" placeholder=\"MM-DD-YYY\"></ion-datetime>\n      </ion-item>\n      <div formGroupName=\"passwordRetry\">\n        <ion-item>\n          <ion-icon name=\"eye\" item-start></ion-icon>\n          <ion-label stacked>Contraseña:</ion-label>\n          <ion-input formControlName=\"password\" type=\"password\" placeholder=\"Contraseña\"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-icon name=\"eye\" item-start></ion-icon>\n          <ion-label stacked>Confirmar contraseña:</ion-label>\n          <ion-input formControlName=\"passwordConfirmation\" type=\"password\" placeholder=\"Confirmar contraseña\"></ion-input>\n        </ion-item>\n      </div>\n      <ion-row radio-group formControlName=\"gender\">\n        <ion-col>\n          <ion-item>\n            <ion-icon name=\"woman\" item-start></ion-icon>\n            <ion-label>Mujer</ion-label>\n            <ion-radio value=\"2\"></ion-radio>\n          </ion-item>\n        </ion-col>\n        <ion-col>\n          <ion-item>\n            <ion-icon name=\"man\" item-start></ion-icon>\n            <ion-label>Hombre</ion-label>\n            <ion-radio value=\"1\"></ion-radio>\n          </ion-item>\n        </ion-col>\n      </ion-row>\n    </ion-list>\n    <div padding>\n      <button ion-button block type=\"submit\" [disabled]=\"!myForm.valid\">Guardar</button>\n    </div>\n  </form>\n</ion-content>");
+
+/***/ }),
+
+/***/ "./src/app/formulario/formulario-routing.module.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/formulario/formulario-routing.module.ts ***!
+  \*********************************************************/
+/*! exports provided: FormularioPageRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormularioPageRoutingModule", function() { return FormularioPageRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var _formulario_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./formulario.page */ "./src/app/formulario/formulario.page.ts");
+
+
+
+
+const routes = [
+    {
+        path: '',
+        component: _formulario_page__WEBPACK_IMPORTED_MODULE_3__["FormularioPage"]
+    }
+];
+let FormularioPageRoutingModule = class FormularioPageRoutingModule {
+};
+FormularioPageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]],
+    })
+], FormularioPageRoutingModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/formulario/formulario.module.ts":
+/*!*************************************************!*\
+  !*** ./src/app/formulario/formulario.module.ts ***!
+  \*************************************************/
+/*! exports provided: FormularioPageModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormularioPageModule", function() { return FormularioPageModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var _formulario_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./formulario-routing.module */ "./src/app/formulario/formulario-routing.module.ts");
+/* harmony import */ var _formulario_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./formulario.page */ "./src/app/formulario/formulario.page.ts");
+
+
+
+
+
+
+
+let FormularioPageModule = class FormularioPageModule {
+};
+FormularioPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"],
+            _formulario_routing_module__WEBPACK_IMPORTED_MODULE_5__["FormularioPageRoutingModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"]
+        ],
+        declarations: [_formulario_page__WEBPACK_IMPORTED_MODULE_6__["FormularioPage"]]
+    })
+], FormularioPageModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/formulario/formulario.page.scss":
+/*!*************************************************!*\
+  !*** ./src/app/formulario/formulario.page.scss ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("ion-content form {\n  text-align: left;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZm9ybXVsYXJpby9DOlxcVXNlcnNcXHJhY2sxXFxQcm95ZWN0b1RhYnMvc3JjXFxhcHBcXGZvcm11bGFyaW9cXGZvcm11bGFyaW8ucGFnZS5zY3NzIiwic3JjL2FwcC9mb3JtdWxhcmlvL2Zvcm11bGFyaW8ucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNJO0VBQ0ksZ0JBQUE7QUNBUiIsImZpbGUiOiJzcmMvYXBwL2Zvcm11bGFyaW8vZm9ybXVsYXJpby5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tY29udGVudHtcclxuICAgIGZvcm17XHJcbiAgICAgICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgIH1cclxufSIsImlvbi1jb250ZW50IGZvcm0ge1xuICB0ZXh0LWFsaWduOiBsZWZ0O1xufSJdfQ== */");
+
+/***/ }),
+
+/***/ "./src/app/formulario/formulario.page.ts":
+/*!***********************************************!*\
+  !*** ./src/app/formulario/formulario.page.ts ***!
+  \***********************************************/
+/*! exports provided: FormularioPage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormularioPage", function() { return FormularioPage; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+
+
+
+
+let FormularioPage = class FormularioPage {
+    constructor(navCtrl, formBuilder) {
+        this.navCtrl = navCtrl;
+        this.formBuilder = formBuilder;
+        this.myForm = this.createMyForm();
+    }
+    saveData() {
+        console.log(this.myForm.value);
+    }
+    createMyForm() {
+        return this.formBuilder.group({
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            lastName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            email: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            dateBirth: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            passwordRetry: this.formBuilder.group({
+                password: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+                passwordConfirmation: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required]
+            }),
+            gender: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+        });
+    }
+};
+FormularioPage.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"] },
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"] }
+];
+FormularioPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-formulario',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./formulario.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/formulario/formulario.page.html")).default,
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./formulario.page.scss */ "./src/app/formulario/formulario.page.scss")).default]
+    })
+], FormularioPage);
+
+
+
+/***/ })
+
+}]);
+//# sourceMappingURL=formulario-formulario-module.js.map
