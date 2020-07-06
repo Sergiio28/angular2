@@ -11,11 +11,11 @@ const routes: Routes = [
     component: LoginPage
   },
   {
-    path: '../register',
+    path: '../../register',
     component: RegisterPage
   },
   {
-    path: '../nuevo-parte',
+    path: '../../login',
     component: NuevoPartePage,canActivate:[AuthGuard]
   }
 

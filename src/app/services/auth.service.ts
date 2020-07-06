@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {User} from '../shared/user.class';
+import {Router} from '@angular/router';
 
 
 @Injectable({
@@ -8,7 +9,7 @@ import {User} from '../shared/user.class';
 })
 export class AuthService {
   public isLogged: any = false;
-  constructor(public afAuth: AngularFireAuth) { 
+  constructor(public afAuth: AngularFireAuth, public router: Router) { 
     afAuth.authState.subscribe(user =>(this.isLogged = user));
   }
 
@@ -29,5 +30,9 @@ export class AuthService {
       console.log('Error on register user', error);
     }
   }
-}
+  async logout() {
+    this.afAuth.signOut();
+    this.router.navigateByUrl('/login');
 
+  }
+}

@@ -10,19 +10,23 @@
       <ion-label>
         Email
       </ion-label>
-      <ion-input type="email" [(ngModel)]="user.email" name="email" ></ion-input>
+      <ion-input type="email" [(ngModel)]="user.email" name="email" required="required"></ion-input>
     </ion-item>
     
     <ion-item>
       <ion-label>
         Password
       </ion-label>
-      <ion-input type="password" [(ngModel)]="user.password" name="password"></ion-input>
+      <ion-input type="password" [(ngModel)]="user.password" name="password" required="required"></ion-input>
     </ion-item>
     <ion-item-divider>
       <ion-button size="large" routerLink="../register">No tengo cuenta</ion-button>
       <ion-button size="large" (click)=onLogin()>Login</ion-button>
     </ion-item-divider>
+    <div style="text-align: center; padding: 15px;">
+      <p class="msg_error"></p>
+    </div>
+    
   </form>
 
 </ion-content>

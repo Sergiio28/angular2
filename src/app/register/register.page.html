@@ -5,24 +5,39 @@
 </ion-header>
 
 <ion-content padding>
-  <form >
+  <form (ngSubmit)="onRegister(formulario)" #formulario="ngForm">
     <ion-item>
       <ion-label>
         Email
       </ion-label>
-      <ion-input type="email" [(ngModel)]="user.email" name="email" ></ion-input>
+      <ion-input type="email" [(ngModel)]="user.email"  name="email" required="required" ></ion-input>
     </ion-item>
     
     <ion-item>
       <ion-label>
-        Password
+        Contraseña
       </ion-label>
-      <ion-input type="password" [(ngModel)]="user.password" name="password"></ion-input>
+      <ion-input type="password" [(ngModel)]="user.password" name="password" id="password" required="required"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Repite la contraseña
+      </ion-label>
+      <ion-input type="password" id="password2" [(ngModel)]="user.password2" name="password2" required="required"></ion-input>
     </ion-item>
     <ion-item-divider>
-      <ion-button size="large" (click)=onRegister()>Registrar</ion-button>
-      <ion-button size="large" routerLink="../login">Ya tengo cuenta</ion-button>
+      
+
+      <a size="large" routerLink="../login" style="padding: 10px;">Ya tengo cuenta</a>
+      <ion-item >
+        <ion-button size="large" (click)=onRegister(formulario)>Registrar</ion-button>
+      </ion-item>
+      
     </ion-item-divider>
+    <div style="text-align: center; padding: 15px;">
+      <p class="msg_error2"></p>
+    </div>
   </form>
+ 
 
 </ion-content>
